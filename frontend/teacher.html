@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğretmen İşlemleri - Dershane Yönetim Sistemi</title>
+
+    <link rel="stylesheet" href="assets/css/skeleton.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/teacher.css">
+
+</head>
+<body>
+
+    <!-- top -->
+    <section class="top">
+        <div class="container">
+            Dershane Yönetim Sistemi
+        </div>
+    </section>
+    <!-- nav -->
+    <nav>
+        <div class="container"> 
+            <ul>
+                <li><a href="#">Anasayfa</a></li>
+                <li><a href="#">Öğrenci İşlemleri</a></li>
+                <li><a href="#">Öğretmen İşlemleri</a></li>
+                <li><a href="#">Sınav İşlemleri</a></li>
+                <li><a href="#">Finansal İşlemler</a></li>
+                <li><a href="#">Çıkış Yap</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="main">
+        <div class="container">
+            <div class="row">
+                <div class="four columns">
+                    <div class="addTeacherArea">
+                        <span id="addTeacherAreaTitle">Öğretmen Ekleme</span>
+                        <div class="inputArea">
+                            <input type="text" placeholder="Öğretmen Adı Soyadı" id="teacherName">
+                            <input type="text" placeholder="Öğretmen Cep Telefonu" id="teacherPhone">
+                            <input type="text" placeholder="Öğretmen Mail Adresi" id="teacherEmail">
+                        </div>
+                        <input type="button" class="button" value="Öğretmen Ekle" onclick="addTeacher()">
+                    </div>
+                </div>
+                <div class="eight columns">
+                    <input type="text" placeholder="Ara..." id="searchInput" style="width: 100%;" oninput="filterTeachers()">
+                    <table id="teacherTable">
+                        <thead>
+                            <tr>
+                                <th>Öğretmen Adı Soyadı</th>
+                                <th>Öğretmen Cep Telefonu</th>
+                                <th>Öğretmen Mail Adresi</th>
+                                <th>İşlemler</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Öğretmen bilgileri dinamik olarak eklenecek -->
+                            <tr>
+                                <td>Mehmet Öğretmen</td>
+                                <td>555-5678</td>
+                                <td>mehmet@example.com</td>
+                                <td>
+                                    <a href="javascript:void(0);" onclick="updateTeacher(this)">Güncelle</a>
+                                    <a href="javascript:void(0);" onclick="deleteTeacher(this)">Sil</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ayşe Öğretmen</td>
+                                <td>5541234567</td>
+                                <td>ayse@example.com</td>
+                                <td>
+                                    <a href="javascript:void(0);" onclick="updateTeacher(this)">Güncelle</a>
+                                    <a href="javascript:void(0);" onclick="deleteTeacher(this)">Sil</a>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <script src="assets/js/main.js"></script>
+    </footer>
+</body>
+</html>

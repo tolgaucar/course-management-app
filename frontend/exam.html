@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sınav İşlemleri - Dershane Yönetim Sistemi</title>
+
+    <link rel="stylesheet" href="assets/css/skeleton.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/exam.css"> <!-- Sınavlar için özel CSS dosyası -->
+
+</head>
+<body>
+
+    <!-- top -->
+    <section class="top">
+        <div class="container">
+            Dershane Yönetim Sistemi
+        </div>
+    </section>
+    <!-- nav -->
+    <nav>
+        <div class="container"> 
+            <ul>
+                <li><a href="#">Anasayfa</a></li>
+                <li><a href="#">Öğrenci İşlemleri</a></li>
+                <li><a href="#">Öğretmen İşlemleri</a></li>
+                <li><a href="#">Sınav İşlemleri</a></li>
+                <li><a href="#">Finansal İşlemler</a></li>
+                <li><a href="#">Çıkış Yap</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="main">
+        <div class="container">
+            <div class="row">
+                <div class="four columns">
+                    <div class="addExamArea">
+                        <span id="addExamAreaTitle">Sınav Ekleme</span>
+                        <div class="inputArea">
+                            <input type="text" placeholder="Sınav Adı" id="examName">
+                            <input type="text" placeholder="Sınav Tarihi" id="examDate">
+                        </div>
+                        <input type="button" class="button" value="Sınav Ekle" onclick="addExam()">
+                    </div>
+                </div>
+                <div class="eight columns">
+                    <select id="examSelect" style="width: 100%;" onchange="loadExamResults()">
+                        <option value="" disabled selected>Seçili Sınav</option>
+                        <!-- Dinamik olarak sınavları buraya ekle -->
+                        <option value="exam1">Matematik Sınavı</option>
+                        <option value="exam2">Fizik Sınavı</option>
+                    </select>
+                    <table id="examResultsTable">
+                        <thead>
+                            <tr>
+                                <th>Öğrenci Adı Soyadı</th>
+                                <th>Not</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Sınav sonuçları dinamik olarak eklenecek -->
+                            <tr>
+                                <td>Ahmet Yılmaz</td>
+                                <td><input type="text" placeholder="Notu Giriniz" class="resultInput"></td>
+                            </tr>
+                            <tr>
+                                <td>Süreyya Yılmaz</td>
+                                <td><input type="text" placeholder="Notu Giriniz" class="resultInput"></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <script src="assets/js/main.js"></script>
+    </footer>
+</body>
+</html>

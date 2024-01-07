@@ -1,0 +1,28 @@
+.main{
+    color: black;
+}
+
+.financialArea{
+    padding: 5px;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.first{
+    border-right: 1px solid black;
+}
+#financialAreaTitle{
+    font-size: 20px;
+}
+
+.financialArea .inputArea{
+    margin-top: 21px;
+}
+
+.financialArea .inputArea input{
+    margin-bottom: 10px !important;
+    font-size: 17px;
+    padding: 10px;
+    width: 30rem;
+}

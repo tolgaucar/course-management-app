@@ -1,0 +1,24 @@
+.main{
+    color: black;
+}
+
+.addStudentArea{
+    padding: 5px;
+    justify-content: center;
+    text-align: center;
+    border-right: 1px solid black;
+}
+
+#addStudentAreaTitle{
+    font-size: 20px;
+}
+
+.addStudentArea .inputArea{
+    margin-top: 21px;
+}
+
+.addStudentArea .inputArea input{
+    margin-bottom: 10px !important;
+    font-size: 17px;
+    padding: 10px;
+}
