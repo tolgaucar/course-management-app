@@ -391,6 +391,43 @@ hr {
   display: table;
   clear: both; }
 
+  /* navbar skeleton css */
+
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+    text-align: center;
+}
+nav li {
+    margin-top: 7px;
+    display: inline-block;
+    margin-right: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 17px;
+}
+/* Make the navbar responsive */
+@media (max-width: 767px) {
+    nav {
+        text-align: center;
+   }
+    nav ul {
+        display: block;
+        text-align: center;
+   }
+    nav li {
+        display: block;
+        margin: 0;
+        margin-bottom: 10px;
+   }
+}
+
+  
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
