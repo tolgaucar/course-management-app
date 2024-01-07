@@ -1,0 +1,38 @@
+* {
+    color: white;
+}
+
+body {
+    background-color: purple;
+}
+
+.head {
+    text-align: center;
+    margin-top: 8rem;
+}
+
+.main {
+    padding: 32px;
+    background-color: white;
+    margin: auto;
+    border: 1px solid white;
+    width: 40rem;
+}
+
+.main .inputArea {
+    color: black; 
+    margin: auto; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.main .inputArea span {
+    color: black;
+    font-weight: bold;
+}
+
+.main .inputArea input {
+    background-color: purple;
+    color: white;
+}
