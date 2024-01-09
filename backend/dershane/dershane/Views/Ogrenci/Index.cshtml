@@ -1,0 +1,60 @@
+﻿@model List<Ogrenci>
+
+@{
+    ViewData["Title"] = "Öğrenci İşlemleri";
+    ViewData["Style"] = "student.css";
+    Layout = "_DashboardLayout";
+}
+
+<section class="main">
+    <div class="container">
+        <div class="row">
+            <div class="four columns">
+                <div class="addStudentArea">
+                    <span id="addStudentAreaTitle">Öğrenci Ekleme</span>
+                    <form method="post" asp-action="AddOgrenci">
+                        <div class="inputArea">
+                            <input type="text" placeholder="Öğrenci Adı Soyadı" id="studentName" name="OgrenciAdiSoyadi">
+                            <input type="text" placeholder="Öğrenci Cep Telefonu" id="studentPhone" name="TelefonNo">
+                            <input type="text" placeholder="Öğrenci Mail Adresi" id="studentEmail" name="OgrenciMailAdresi">
+                        </div>
+                        <input type="submit" class="button" value="Öğrenci Ekle">
+                    </form>
+                </div>
+            </div>
+            <div class="eight columns">
+                <input type="text" placeholder="Ara..." id="searchInput" style="width: 100%;" oninput="filterStudents()">
+                <table id="studentTable">
+                    <thead>
+                        <tr>
+                            <th>Öğrenci Adı Soyadı</th>
+                            <th>Öğrenci Cep Telefonu</th>
+                            <th>Öğrenci Mail Adresi</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var ogrenci in Model)
+                        {
+                            <tr>
+                                <td>@ogrenci.OgrenciAdiSoyadi</td>
+                                <td>@ogrenci.TelefonNo</td>
+                                <td>@ogrenci.OgrenciMailAdresi</td>
+                                <td>
+                                    <form method="post" asp-action="UpdateOgrenci">
+                                        <input type="hidden" name="Id" value="@ogrenci.Id">
+                                        <input type="submit" value="Güncelle">
+                                    </form>
+                                    <form method="post" asp-action="DeleteOgrenci">
+                                        <input type="hidden" name="id" value="@ogrenci.Id">
+                                        <input type="submit" value="Sil">
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

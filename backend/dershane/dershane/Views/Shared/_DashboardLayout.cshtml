@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dershane Yönetim Sistemi - @ViewData["Title"]</title>
+
+
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+
+    <link rel="stylesheet" href="/css/@ViewData["Style"]">
+
+</head>
+<body>
+
+    <!-- top -->
+    <section class="top">
+        <div class="container">
+            Dershane Yönetim Sistemi - @ViewData["Title"]
+        </div>
+    </section>
+    <!-- nav -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#">Anasayfa</a></li>
+                <li><a href="#">Öğrenci İşlemleri</a></li>
+                <li><a href="#">Öğretmen İşlemleri</a></li>
+                <li><a href="#">Sınav İşlemleri</a></li>
+                <li><a href="#">Finansal İşlemler</a></li>
+                <li><a href="#">Çıkış Yap</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    @RenderBody()
+
+</body>
+<footer>
+
+    <script src="/js/main.js"></script>
+</footer>
+</html>

@@ -1,0 +1,125 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/obj/Debug/net7.0/scopedcss/projectbundle/dershane.bundle.scp.css",
+      "PackagePath": "staticwebassets/dershane.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/css/.DS_Store",
+      "PackagePath": "staticwebassets/css/.DS_Store"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/css/dashboard.css",
+      "PackagePath": "staticwebassets/css/dashboard.css"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/css/exam.css",
+      "PackagePath": "staticwebassets/css/exam.css"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/css/financial.css",
+      "PackagePath": "staticwebassets/css/financial.css"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/css/normalize.css",
+      "PackagePath": "staticwebassets/css/normalize.css"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/css/skeleton.css",
+      "PackagePath": "staticwebassets/css/skeleton.css"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/css/student.css",
+      "PackagePath": "staticwebassets/css/student.css"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/css/style.css",
+      "PackagePath": "staticwebassets/css/style.css"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/css/teacher.css",
+      "PackagePath": "staticwebassets/css/teacher.css"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/js/.DS_Store",
+      "PackagePath": "staticwebassets/js/.DS_Store"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/js/main.js",
+      "PackagePath": "staticwebassets/js/main.js"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/Users/tolgaucar/Desktop/kodlar/dotnet/backend/dershane/dershane/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.dershane.props",
+      "PackagePath": "build\\dershane.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.dershane.props",
+      "PackagePath": "buildMultiTargeting\\dershane.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.dershane.props",
+      "PackagePath": "buildTransitive\\dershane.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.dershane.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

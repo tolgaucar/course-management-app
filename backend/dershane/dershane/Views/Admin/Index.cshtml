@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Dershane Yönetim Sistemi - Giriş";
+    ViewData["Style"] = "style.css";
+    Layout = "_Layout";
+}
+
+<div class="container">
+    <section class="head">
+        <h2>Dershane Yönetim Sistemi</h2>
+        <h5>Yetkili Girişi</h5>
+    </section>
+    <section class="main">
+        <div class="container">
+            <form method="post" asp-action="GirisYap">
+                <div class="inputArea">
+                    <label for="KullaniciAdi">Kullanıcı adı:</label>
+                    <input type="text" id="KullaniciAdi" name="KullaniciAdi" placeholder="Kullanıcı adı" required>
+                </div>
+                <div class="inputArea">
+                    <label for="Sifre">Şifre:</label>
+                    <input type="password" id="Sifre" name="Sifre" placeholder="Şifre" required>
+                </div>
+                <div class="inputArea">
+                    <input type="submit" value="Giriş Yap">
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
