@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using dershane.Data;
 
@@ -10,9 +11,11 @@ using dershane.Data;
 namespace dershane.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240109002056_OgretmenModel")]
+    partial class OgretmenModel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,30 +45,6 @@ namespace dershane.Migrations
                     b.ToTable("Admins");
                 });
 
-            modelBuilder.Entity("Finansal", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Aciklama")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("Miktar")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("Tur")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Finansals");
-                });
-
             modelBuilder.Entity("Ogrenci", b =>
                 {
                     b.Property<int>("Id")
@@ -91,33 +70,6 @@ namespace dershane.Migrations
                     b.ToTable("Ogrencis");
                 });
 
-            modelBuilder.Entity("OgrenciNot", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Not")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("OgrenciAdiSoyadi")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("OgrenciId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SinavId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("OgrenciNots");
-                });
-
             modelBuilder.Entity("Ogretmen", b =>
                 {
                     b.Property<int>("Id")
@@ -141,27 +93,6 @@ namespace dershane.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Ogretmens");
-                });
-
-            modelBuilder.Entity("Sinav", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Adi")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Tarih")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Sinavs");
                 });
 #pragma warning restore 612, 618
         }

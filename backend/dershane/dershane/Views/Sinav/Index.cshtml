@@ -1,0 +1,60 @@
+﻿@model List<Sinav>
+
+@{
+    ViewData["Title"] = "Sınav İşlemleri";
+    ViewData["Style"] = "teacher.css";
+    Layout = "_DashboardLayout";
+}
+
+<section class="main">
+    <div class="container">
+        <div class="row">
+            <div class="four columns">
+                <div class="addStudentArea">
+                    <span id="addStudentAreaTitle">Sınav Ekleme</span>
+                    <form method="post" asp-action="AddSinav">
+                        <div class="inputArea">
+                            <input type="text" placeholder="Sınav Adı" id="examName" name="Adi">
+                        </div>
+                        <div class="inputArea">
+                            <input type="date" placeholder="Sınav Tarihi" id="examDate" name="Tarih">
+
+                        </div>
+                        <input type="submit" class="button" value="Sınav Ekle">
+                    </form>
+                </div>
+            </div>
+            <div class="eight columns">
+                <input type="text" placeholder="Ara..." id="searchInput" style="width: 100%;" oninput="filterStudents()">
+                <table id="studentTable" style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th>Sınav Adı </th>
+                            <th>Sınav Tarihi</th>
+                            <th>İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var sinav in Model)
+                        {
+                            <tr>
+                                <td>@sinav.Adi</td>
+                                <td>@sinav.Tarih</td>
+                                <td style="display:flex;">
+                                    <form method="post" asp-action="UpdateSinav">
+                                        <input type="hidden" name="Id" value="@sinav.Id">
+                                        <input type="submit" value="Güncelle">
+                                    </form>
+                                    <form method="post" asp-action="DeleteSinav">
+                                        <input type="hidden" name="id" value="@sinav.Id">
+                                        <input type="submit" value="Sil">
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

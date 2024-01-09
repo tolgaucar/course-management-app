@@ -1,0 +1,40 @@
+﻿@model Ogretmen
+
+@{
+    ViewData["Title"] = "Öğretmen Düzenleme";
+    ViewData["Style"] = "teacher.css";
+    Layout = "_DashboardLayout";
+}
+
+<section class="main">
+    <div class="container">
+        <div class="row">
+            <div class="eight columns">
+                <h2>Öğretmen Düzenleme</h2>
+                <form method="post" asp-action="EditOgretmen">
+                    @Html.HiddenFor(model => model.Id)
+
+                    <div class="form-group">
+                        <label asp-for="OgretmenAdiSoyadi"></label>
+                        @Html.EditorFor(model => model.OgretmenAdiSoyadi, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.OgretmenAdiSoyadi, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="TelefonNo"></label>
+                        @Html.EditorFor(model => model.TelefonNo, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.TelefonNo, "", new { @class = "text-danger" })
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="OgretmenMailAdresi"></label>
+                        @Html.EditorFor(model => model.OgretmenMailAdresi, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.OgretmenMailAdresi, "", new { @class = "text-danger" })
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

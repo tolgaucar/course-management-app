@@ -1,16 +1,16 @@
-﻿// Controllers/OgrenciController.cs
+﻿// Controllers/OgretmenController.cs
 using System.Linq;
 using dershane.Models;
 using dershane.Services;
 using Microsoft.AspNetCore.Mvc;
 
-public class OgrenciController : Controller
+public class OgretmenController : Controller
 {
-    private readonly IOgrenciService _ogrenciService;
+    private readonly IOgretmenService _ogretmenService;
 
-    public OgrenciController(IOgrenciService ogrenciService)
+    public OgretmenController(IOgretmenService ogretmenService)
     {
-        _ogrenciService = ogrenciService;
+        _ogretmenService = ogretmenService;
     }
 
     public IActionResult Index()
@@ -20,64 +20,55 @@ public class OgrenciController : Controller
             return RedirectToAction("Index", "Admin");
         }
 
-        var ogrenciler = _ogrenciService.GetOgrenciler();
-        return View(ogrenciler);
-    }
-
-    [HttpGet]
-    public IActionResult GetAllOgrenciler()
-    {
-        // Tüm öğrencileri veritabanından çek
-        List<Ogrenci> ogrenciler = _ogrenciService.GetOgrenciler();
-
-        return Json(ogrenciler);
+        var ogretmenler = _ogretmenService.GetOgretmenler();
+        return View(ogretmenler);
     }
 
     [HttpPost]
-    public IActionResult AddOgrenci(Ogrenci ogrenci)
+    public IActionResult AddOgretmen(Ogretmen ogretmen)
     {
         if (HttpContext.Session.GetString("KullaniciAdi") == null)
         {
             return RedirectToAction("Index", "Admin");
         }
 
-        _ogrenciService.AddOgrenci(ogrenci);
+        _ogretmenService.AddOgretmen(ogretmen);
         return RedirectToAction("Index");
     }
 
     [HttpPost]
-    public IActionResult UpdateOgrenci(int id)
+    public IActionResult UpdateOgretmen(int id)
     {
         if (HttpContext.Session.GetString("KullaniciAdi") == null)
         {
             return RedirectToAction("Index", "Admin");
         }
 
-        var ogrenci = _ogrenciService.GetOgrenciById(id);
-        return View("Edit", ogrenci);
+        var ogretmen = _ogretmenService.GetOgretmenById(id);
+        return View("Edit", ogretmen);
     }
 
     [HttpPost]
-    public IActionResult EditOgrenci(Ogrenci ogrenci)
+    public IActionResult EditOgretmen(Ogretmen ogretmen)
     {
         if (HttpContext.Session.GetString("KullaniciAdi") == null)
         {
             return RedirectToAction("Index", "Admin");
         }
 
-        _ogrenciService.UpdateOgrenci(ogrenci);
+        _ogretmenService.UpdateOgretmen(ogretmen);
         return RedirectToAction("Index");
     }
 
     [HttpPost]
-    public IActionResult DeleteOgrenci(int id)
+    public IActionResult DeleteOgretmen(int id)
     {
         if (HttpContext.Session.GetString("KullaniciAdi") == null)
         {
             return RedirectToAction("Index", "Admin");
         }
 
-        _ogrenciService.DeleteOgrenci(id);
+        _ogretmenService.DeleteOgretmen(id);
         return RedirectToAction("Index");
     }
 }

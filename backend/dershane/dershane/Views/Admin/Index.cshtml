@@ -11,7 +11,7 @@
     </section>
     <section class="main">
         <div class="container">
-            <form method="post" asp-action="GirisYap">
+            <form method="post" asp-action="GirisYap" id="loginForm">
                 <div class="inputArea">
                     <label for="KullaniciAdi">Kullanıcı adı:</label>
                     <input type="text" id="KullaniciAdi" name="KullaniciAdi" placeholder="Kullanıcı adı" required>
@@ -21,9 +21,59 @@
                     <input type="password" id="Sifre" name="Sifre" placeholder="Şifre" required>
                 </div>
                 <div class="inputArea">
-                    <input type="submit" value="Giriş Yap">
+                    <input type="submit" value="Giriş Yap" id="loginButton">
                 </div>
             </form>
+
         </div>
     </section>
 </div>
+
+<script>
+
+    // sweetalert ve JQUERY AJAX isterleri tamamlandı.
+
+
+    $(document).ready(function () {
+        $('#loginForm').submit(function (e) {
+            e.preventDefault(); // Prevent the form from submitting the traditional way
+
+            // Serialize form data
+            var formData = $(this).serialize();
+
+            // AJAX request
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("GirisYap", "Admin")',
+                data: formData,
+                success: function (response) {
+                    if (response.success) {
+                        // Successful login
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Giriş Başarılı!',
+                            text: 'Giriş başarıyla tamamlandı.',
+                        }).then(function () {
+                            window.location.href = '@Url.Action("Dashboard", "Admin")';
+                        });
+                    } else {
+                        // Failed login
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Giriş Başarısız!',
+                            text: 'Kullanıcı adı veya şifre hatalı.',
+                        });
+                    }
+                },
+                error: function () {
+                    // Handle AJAX errors
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Hata!',
+                        text: 'Bir hata oluştu. Lütfen tekrar deneyin.',
+                    });
+                }
+            });
+        });
+    });
+</script>

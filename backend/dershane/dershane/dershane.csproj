@@ -22,11 +22,17 @@
     <None Remove="Services\" />
     <None Remove="Views\Admin\" />
     <None Remove="Views\Ogrenci\" />
+    <None Remove="Views\Ogretmen\" />
+    <None Remove="Views\Sinav\" />
+    <None Remove="Views\Finansal\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="Services\" />
     <Folder Include="Views\Admin\" />
     <Folder Include="Views\Ogrenci\" />
+    <Folder Include="Views\Ogretmen\" />
+    <Folder Include="Views\Sinav\" />
+    <Folder Include="Views\Finansal\" />
   </ItemGroup>
 </Project>

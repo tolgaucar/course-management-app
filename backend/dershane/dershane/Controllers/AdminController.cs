@@ -18,21 +18,21 @@ public class AdminController : Controller
         return View();
     }
 
-    [HttpPost]
-    public IActionResult GirisYap(Admin admin)
+[HttpPost]
+public IActionResult GirisYap(Admin admin)
+{
+    // Giriş kontrolü
+    if (_adminService.GirisKontrol(admin))
     {
-        // Giriş kontrolü
-        if (_adminService.GirisKontrol(admin))
-        {
-            // Yetkili kullanıcıyı session'a ekle
-            HttpContext.Session.SetString("KullaniciAdi", admin.KullaniciAdi);
-            return RedirectToAction("Dashboard", "Admin");
-        }
-
-        // Hatalı giriş durumu
-        ViewBag.Hata = "Kullanıcı adı veya şifre hatalı.";
-        return View("Index");
+        // Yetkili kullanıcıyı session'a ekle
+        HttpContext.Session.SetString("KullaniciAdi", admin.KullaniciAdi);
+        return Json(new { success = true });
     }
+
+    // Hatalı giriş durumu
+    return Json(new { success = false });
+}
+
 
     public IActionResult Dashboard()
     {

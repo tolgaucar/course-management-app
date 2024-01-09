@@ -1,0 +1,32 @@
+﻿@model Sinav
+
+@{
+    ViewData["Title"] = "Sınav Düzenleme";
+    ViewData["Style"] = "teacher.css";
+    Layout = "_DashboardLayout";
+}
+
+<section class="main">
+    <div class="container">
+        <div class="row">
+            <div class="eight columns">
+                <h2>Sınav Düzenleme</h2>
+                <form method="post" asp-action="EditSinav">
+                    <input type="hidden" asp-for="Id" />
+
+                    <div class="form-group">
+                        <label asp-for="Adi"></label>
+                        <input asp-for="Adi" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Tarih"></label>
+                        <input asp-for="Tarih" class="form-control" />
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

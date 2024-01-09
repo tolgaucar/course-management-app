@@ -1,16 +1,16 @@
-﻿// Controllers/OgrenciController.cs
+﻿// Controllers/SinavController.cs
 using System.Linq;
 using dershane.Models;
 using dershane.Services;
 using Microsoft.AspNetCore.Mvc;
 
-public class OgrenciController : Controller
+public class SinavController : Controller
 {
-    private readonly IOgrenciService _ogrenciService;
+    private readonly ISinavService _sinavService;
 
-    public OgrenciController(IOgrenciService ogrenciService)
+    public SinavController(ISinavService sinavService)
     {
-        _ogrenciService = ogrenciService;
+        _sinavService = sinavService;
     }
 
     public IActionResult Index()
@@ -20,64 +20,55 @@ public class OgrenciController : Controller
             return RedirectToAction("Index", "Admin");
         }
 
-        var ogrenciler = _ogrenciService.GetOgrenciler();
-        return View(ogrenciler);
-    }
-
-    [HttpGet]
-    public IActionResult GetAllOgrenciler()
-    {
-        // Tüm öğrencileri veritabanından çek
-        List<Ogrenci> ogrenciler = _ogrenciService.GetOgrenciler();
-
-        return Json(ogrenciler);
+        var sinavler = _sinavService.GetSinavler();
+        return View(sinavler);
     }
 
     [HttpPost]
-    public IActionResult AddOgrenci(Ogrenci ogrenci)
+    public IActionResult AddSinav(Sinav sinav)
     {
         if (HttpContext.Session.GetString("KullaniciAdi") == null)
         {
             return RedirectToAction("Index", "Admin");
         }
 
-        _ogrenciService.AddOgrenci(ogrenci);
+        _sinavService.AddSinav(sinav);
         return RedirectToAction("Index");
     }
 
     [HttpPost]
-    public IActionResult UpdateOgrenci(int id)
+    public IActionResult UpdateSinav(int Id)
     {
         if (HttpContext.Session.GetString("KullaniciAdi") == null)
         {
             return RedirectToAction("Index", "Admin");
         }
 
-        var ogrenci = _ogrenciService.GetOgrenciById(id);
-        return View("Edit", ogrenci);
+        var sinav = _sinavService.GetSinavById(Id);
+        return View("Edit", sinav);
     }
 
     [HttpPost]
-    public IActionResult EditOgrenci(Ogrenci ogrenci)
+    public IActionResult EditSinav(Sinav sinav)
     {
         if (HttpContext.Session.GetString("KullaniciAdi") == null)
         {
             return RedirectToAction("Index", "Admin");
         }
 
-        _ogrenciService.UpdateOgrenci(ogrenci);
+        _sinavService.UpdateSinav(sinav);
         return RedirectToAction("Index");
     }
 
     [HttpPost]
-    public IActionResult DeleteOgrenci(int id)
+    public IActionResult DeleteSinav(int id)
     {
         if (HttpContext.Session.GetString("KullaniciAdi") == null)
         {
             return RedirectToAction("Index", "Admin");
         }
 
-        _ogrenciService.DeleteOgrenci(id);
+        _sinavService.DeleteSinav(id);
         return RedirectToAction("Index");
     }
 }

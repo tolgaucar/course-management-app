@@ -26,6 +26,12 @@ namespace dershane
 
             builder.Services.AddScoped<IAdminService, AdminService>();
             builder.Services.AddScoped<IOgrenciService, OgrenciService>();
+            builder.Services.AddScoped<IOgretmenService, OgretmenService>();
+            builder.Services.AddScoped<ISinavService, SinavService>();
+            builder.Services.AddScoped<IFinansalService, FinansalService>();
+
+
+
 
 
             var app = builder.Build();
@@ -49,7 +55,7 @@ namespace dershane
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Admin}/{action=Index}/{id?}");
 
             app.Run();
         }

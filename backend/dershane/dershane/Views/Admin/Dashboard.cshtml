@@ -6,32 +6,37 @@
 
     <section class="main">
         <div class="container">
-            <div class="row">
-                <div class="box one-half column">
-                    <h5>12</h5>
-                    <span>kayıtlı öğrenci.</span>
-                </div>
-                <div class="box one-half column">
-                    <h5>21</h5>
-                    <span>kayıtlı öğretmen.</span>
-                </div>
 
-
-            </div>
-            <div class="row">
-                <div class="box one-half column">
-                    <h5>3000 ₺</h5>
-                    <span>Toplam Gelir</span>
-                </div>
-                <div class="box one-half column">
-                    <h5>5000 ₺</h5>
-                    <span>Toplam Gider</span>
-                </div>
-            </div>
             <div class="row">
                 <div class="box">
-                    <h3>Hoş geldiniz, admin</h3>
+                    <h3>Hoş geldiniz, @Context.Session.GetString("KullaniciAdi")!</h3>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="box">
+                    <h3>Özellikler</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="box one-half column">
+                    <h5>Öğrenci İşlemleri</h5>
+                </div>
+                <div class="box one-half column">
+                    <h5>Öğretmen İşlemleri</h5>
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="box one-half column">
+                    <h5> Sınav İşlemleri </h5>
+                </div>
+                <div class="box one-half column">
+                    <h5>Finansal İşlemler</h5>
+                </div>
+            </div>
+
+
         </div>
     </section>

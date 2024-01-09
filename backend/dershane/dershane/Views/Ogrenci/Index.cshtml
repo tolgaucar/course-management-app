@@ -6,6 +6,7 @@
     Layout = "_DashboardLayout";
 }
 
+
 <section class="main">
     <div class="container">
         <div class="row">
@@ -40,7 +41,7 @@
                                 <td>@ogrenci.OgrenciAdiSoyadi</td>
                                 <td>@ogrenci.TelefonNo</td>
                                 <td>@ogrenci.OgrenciMailAdresi</td>
-                                <td>
+                                <td style="display:flex;">
                                     <form method="post" asp-action="UpdateOgrenci">
                                         <input type="hidden" name="Id" value="@ogrenci.Id">
                                         <input type="submit" value="Güncelle">
@@ -58,3 +59,12 @@
         </div>
     </div>
 </section>
+
+<script>$(document).ready(function () {
+    // Jquery Datatables İsteri
+
+    let table = new DataTable('#studentTable');
+
+
+
+    });</script>

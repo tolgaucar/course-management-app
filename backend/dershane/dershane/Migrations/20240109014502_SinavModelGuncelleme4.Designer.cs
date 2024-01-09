@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using dershane.Data;
 
@@ -10,9 +11,11 @@ using dershane.Data;
 namespace dershane.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240109014502_SinavModelGuncelleme4")]
+    partial class SinavModelGuncelleme4
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -40,30 +43,6 @@ namespace dershane.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Admins");
-                });
-
-            modelBuilder.Entity("Finansal", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Aciklama")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("Miktar")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("Tur")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Finansals");
                 });
 
             modelBuilder.Entity("Ogrenci", b =>
@@ -115,6 +94,8 @@ namespace dershane.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("SinavId");
+
                     b.ToTable("OgrenciNots");
                 });
 
@@ -162,6 +143,20 @@ namespace dershane.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Sinavs");
+                });
+
+            modelBuilder.Entity("OgrenciNot", b =>
+                {
+                    b.HasOne("Sinav", null)
+                        .WithMany("OgrenciNotlar")
+                        .HasForeignKey("SinavId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Sinav", b =>
+                {
+                    b.Navigation("OgrenciNotlar");
                 });
 #pragma warning restore 612, 618
         }

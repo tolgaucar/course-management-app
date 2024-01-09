@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dershane Yönetim Sistemi - @ViewData["Title"]</title>
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 
     <link rel="stylesheet" href="/css/skeleton.css">
     <link rel="stylesheet" href="/css/dashboard.css">
@@ -24,12 +29,12 @@
     <nav>
         <div class="container">
             <ul>
-                <li><a href="#">Anasayfa</a></li>
-                <li><a href="#">Öğrenci İşlemleri</a></li>
-                <li><a href="#">Öğretmen İşlemleri</a></li>
-                <li><a href="#">Sınav İşlemleri</a></li>
-                <li><a href="#">Finansal İşlemler</a></li>
-                <li><a href="#">Çıkış Yap</a></li>
+                <li><a href="/Admin/Dashboard">Anasayfa</a></li>
+                <li><a href="/Ogrenci/Index">Öğrenci İşlemleri</a></li>
+                <li><a href="/Ogretmen/Index">Öğretmen İşlemleri</a></li>
+                <li><a href="/Sinav/Index">Sınav İşlemleri</a></li>
+                <li><a href="/Finansal/Index">Finansal İşlemler</a></li>
+                <li><a href="/Admin/Index">Çıkış Yap</a></li>
 
             </ul>
         </div>

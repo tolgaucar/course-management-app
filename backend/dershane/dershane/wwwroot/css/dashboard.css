@@ -37,6 +37,10 @@ img {
 
 /* style global */
 
+#studentTable{
+	width: 100%;
+}
+
 .top {
 	text-align: center;
 	font-size: 17px;

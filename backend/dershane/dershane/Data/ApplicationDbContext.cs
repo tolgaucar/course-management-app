@@ -11,6 +11,14 @@ namespace dershane.Data
     {
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Ogrenci> Ogrencis { get; set; }
+        public DbSet<Ogretmen> Ogretmens { get; set; }
+        public DbSet<Sinav> Sinavs { get; set; }
+        public DbSet<OgrenciNot> OgrenciNots { get; set; }
+        public DbSet<Finansal> Finansals { get; set; }
+
+
+
+
 
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
