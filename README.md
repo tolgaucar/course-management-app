@@ -11,7 +11,8 @@ This project encompasses a Course Management application developed using .NET Co
 - **Admin Login:** Secure access for administrators.
 
 ## Preview
-![giphy](https://github.com/tolgaucar/course-management-app/assets/53059811/5434f2fb-8c47-4c20-96d6-2834f8482471)
+![Jan-21-2024 03-52-26](https://github.com/tolgaucar/course-management-app/assets/53059811/e8c025d4-dd5e-4a49-a463-1edb67fc8020)
+
 
 ## Requirements
 
