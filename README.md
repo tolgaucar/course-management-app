@@ -51,7 +51,7 @@ Visit your server address in your browser.
 Create an admin user from database
 Explore the application and utilize the course management functionality.
 
-## Usage
+## Contribution
 If you would like to contribute to this project, please review the CONTRIBUTING.md file and feel free to submit your suggestions.
 
 ## License
